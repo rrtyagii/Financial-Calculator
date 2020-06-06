@@ -12,6 +12,10 @@ PMT - periodic payment
 m - compounding frequency (compounding internvals)
 Y - number of years in term
 
+
+using : http://www.frickcpa.com/tvom/tvom_formulas.asp
+for formulae 
+
 """
 
 class CalculatorState:
@@ -84,7 +88,7 @@ class CalculatorState:
         return FV
 
 
-    def preset_val(self, FV, i, n):
+    def present_val(self, FV, i, n):
         assert i>0, "Interest rate cannot be negative"
         assert n>0 , "Number of compounding periods in the term cannot be negative"
         i=i/100
@@ -115,7 +119,15 @@ class CalculatorState:
         Y - number of years in term
        """
 
+    def present_value_ord(self,i,n):
+        #finding present value of ordinary annuity
+        pass
 
-    def payment_per_period(self):
+    def number_periods(self, PV,i, PMT):
+        #finding the number of periods ,n, -present value of annuity
+        pass
+
+    def payment_per_period(self, i,n,PV):
+        #finding payment, PMT- PV of annuity
         pass
 
